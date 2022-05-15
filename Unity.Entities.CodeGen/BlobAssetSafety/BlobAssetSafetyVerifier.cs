@@ -146,7 +146,7 @@ namespace Unity.Entities.CodeGen
                     targetMethod.Name == nameof(BlobBuilder.ConstructRoot) &&
                     targetMethod is GenericInstanceMethod genericTargetMethod)
                 {
-                    foreach (var arg in genericTargetMethod.GenericArguments)
+                    /*foreach (var arg in genericTargetMethod.GenericArguments)
                     {
                         var validatedTypes = new HashSet<TypeReference>();
                         if (IsOrHasReferenceTypeField(arg, validatedTypes, method, diagnosticMessages, out var fieldDescription))
@@ -155,7 +155,8 @@ namespace Unity.Entities.CodeGen
                             var message = $"You may not build a type {arg.Name} with {nameof(BlobBuilder.Construct)} as {errorFieldPath} is a reference or pointer.  Only non-reference types are allowed in Blobs.";
                             diagnosticMessages.Add(UserError.MakeError("ConstructBlobWithRefTypeViolation", message, method, instruction));
                         }
-                    }
+                    }*/
+
                 }
                 if (instruction.OpCode == OpCodes.Ldfld)
                 {
